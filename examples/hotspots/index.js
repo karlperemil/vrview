@@ -16,99 +16,199 @@ var vrView;
 
 // All the scenes for the experience
 var scenes = {
-  dolphins: {
-    image: 'dolphins.jpg',
+  main: {
+    video: '../video/Film1-WasteProblem_PlaceHolder_VimeoSettings.mp4',
     preview: 'dolphins-preview.jpg',
+    loop: true,
+    muted: true,
+    cornermap: false,
+    next: function(){
+      $('#intro').show();
+    },
     hotspots: {
-      whaleRight: {
+      mranzai: {
         pitch: 0,
-        yaw: 110,
-        radius: 0.05,
-        distance: 1
+        yaw: 0,
+        radius: 0.09,
+        distance: 1,
+        copy: "Mr. Anzai"
       },
-      whaleLeft: {
+      humanrights: {
         pitch: 0,
-        yaw: 150,
-        radius: 0.05,
-        distance: 1
+        yaw: 90,
+        radius: 0.09,
+        distance: 1,
+        copy: "TThe Human Rights Issue"
       },
-      walrus: {
-        pitch: 0,
-        yaw: 170,
-        radius: 0.05,
-        distance: 1
-      }
-    }
-  },
-  whaleLeft: {
-    image: 'whale-left.jpg',
-    preview: 'whale-left-preview.jpg',
-    hotspots: {
-      whaleRight: {
-        pitch: 0,
-        yaw: 125,
-        radius: 0.05,
-        distance: 1
-      },
-      dolphins: {
-        pitch: 0,
-        yaw: 110,
-        radius: 0.05,
-        distance: 1
-      },
-      walrus: {
-        pitch: 0,
-        yaw: 30,
-        radius: 0.05,
-        distance: 1
-      }
-    }
-  },
-  whaleRight: {
-    image: 'whale-right.jpg',
-    preview: 'whale-right-preview.jpg',
-    hotspots: {
-      dolphins: {
-        pitch: 0,
-        yaw: 305,
-        radius: 0.05,
-        distance: 1
-      },
-      whaleLeft: {
+      radiation: {
         pitch: 0,
         yaw: 180,
-        radius: 0.05,
-        distance: 1
+        radius: 0.09,
+        distance: 1,
+        copy: "Radiation Scanning"
       },
-      walrus: {
+      mrskanno : {
         pitch: 0,
-        yaw: 210,
-        radius: 0.05,
-        distance: 1
+        yaw: 270,
+        radius: 0.09,
+        distance: 1,
+        copy: "Mrs. Kanno"
       }
     }
   },
-  walrus: {
-    image: 'walrus.jpg',
-    preview: 'walrus-preview.jpg',
+  mranzai: {
+    video: '../video/Film5-MrAnzai_VimeoSettings.mp4',
+    preview: 'dolphins-preview.jpg',
+    loop: false,
+    cornermap: true,
+    next: function(){
+      $('#intro').hide();
+    },
     hotspots: {
-      whaleLeft: {
+      mranzai: {
         pitch: 0,
-        yaw: 20,
-        radius: 0.05,
-        distance: 1
+        yaw: 0,
+        radius: 0.09,
+        distance: 1,
+        copy: "Mr. Anzai"
       },
-      whaleRight: {
+      humanrights: {
         pitch: 0,
-        yaw: 340,
-        radius: 0.05,
-        distance: 1
+        yaw: 90,
+        radius: 0.09,
+        distance: 1,
+        copy: "TThe Human Rights Issue"
       },
-      dolphins: {
+      radiation: {
         pitch: 0,
-        yaw: 320,
-        radius: 0.05,
-        distance: 1
+        yaw: 180,
+        radius: 0.09,
+        distance: 1,
+        copy: "Radiation Scanning"
+      },
+      mrskanno : {
+        pitch: 0,
+        yaw: 270,
+        radius: 0.09,
+        distance: 1,
+        copy: "Mrs. Kanno"
+      }
+    }
+  },
+  humanrights: {
+    video: '../video/Film2-HumanRightsIssue_VimeoSettings.mp4',
+    preview: 'whale-left-preview.jpg',
+    loop: false,
+    cornermap: true,
+    next: function(){
+      $('#intro').hide();
+    },
+    hotspots: {
+      mranzai: {
+        pitch: 0,
+        yaw: 0,
+        radius: 0.09,
+        distance: 1,
+        copy: "Mr. Anzai"
+      },
+      humanrights: {
+        pitch: 0,
+        yaw: 90,
+        radius: 0.09,
+        distance: 1,
+        copy: "TThe Human Rights Issue"
+      },
+      radiation: {
+        pitch: 0,
+        yaw: 180,
+        radius: 0.09,
+        distance: 1,
+        copy: "Radiation Scanning"
+      },
+      mrskanno : {
+        pitch: 0,
+        yaw: 270,
+        radius: 0.09,
+        distance: 1,
+        copy: "Mrs. Kanno"
+      }
+    }
+  },
+  radiation: {
+    video: '../video/Film3-RadiationScanning_VimeoSettings.mp4',
+    preview: 'whale-right-preview.jpg',
+    loop: false,
+    cornermap: true,
+    next: function(){
+      $('#intro').hide();
+    },
+    hotspots: {
+      mranzai: {
+        pitch: 0,
+        yaw: 0,
+        radius: 0.09,
+        distance: 1,
+        copy: "Mr. Anzai"
+      },
+      humanrights: {
+        pitch: 0,
+        yaw: 90,
+        radius: 0.09,
+        distance: 1,
+        copy: "TThe Human Rights Issue"
+      },
+      radiation: {
+        pitch: 0,
+        yaw: 180,
+        radius: 0.09,
+        distance: 1,
+        copy: "Radiation Scanning"
+      },
+      mrskanno : {
+        pitch: 0,
+        yaw: 270,
+        radius: 0.09,
+        distance: 1,
+        copy: "Mrs. Kanno"
+      }
+    }
+  },
+  mrskanno: {
+    video: '../video/Film4-MrsKanno_VimeoSettings.mp4',
+    preview: 'walrus-preview.jpg',
+    loop: false,
+    cornermap: true,
+    next: function(){
+      $('#intro').hide();
+    },
+    hotspots: {
+      mranzai: {
+        pitch: 0,
+        yaw: 0,
+        radius: 0.09,
+        distance: 1,
+        copy: "Mr. Anzai"
+      },
+      humanrights: {
+        pitch: 0,
+        yaw: 90,
+        radius: 0.09,
+        distance: 1,
+        copy: "TThe Human Rights Issue"
+      },
+      radiation: {
+        pitch: 0,
+        yaw: 180,
+        radius: 0.09,
+        distance: 1,
+        copy: "Radiation Scanning"
+      },
+      mrskanno : {
+        pitch: 0,
+        yaw: 270,
+        radius: 0.09,
+        distance: 1,
+        copy: "Mrs. Kanno"
       }
     }
   }
@@ -118,8 +218,10 @@ function onLoad() {
   vrView = new VRView.Player('#vrview', {
     image: 'blank.png',
     preview: 'blank.png',
-    is_stereo: true,
-    is_autopan_off: true
+    is_stereo: false,
+    loop: true,
+    is_autopan_off: true,
+    muted: true
   });
 
   vrView.on('ready', onVRViewReady);
@@ -131,7 +233,17 @@ function onLoad() {
 
 function onVRViewReady(e) {
   console.log('onVRViewReady');
-  loadScene('walrus');
+  loadScene('main');
+  listeners();
+}
+
+function listeners(){
+  $('#intro-hide').click(function(){
+    $('#intro').hide();
+  });
+  $('#corner-map').click(function(){
+    loadScene('main');
+  })
 }
 
 function onModeChange(e) {
@@ -156,11 +268,20 @@ function loadScene(id) {
 
   // Set the image
   vrView.setContent({
-    image: scenes[id].image,
+    video: scenes[id].video,
     preview: scenes[id].preview,
-    is_stereo: true,
-    is_autopan_off: true
+    is_stereo: false,
+    is_autopan_off: true,
+    loop: scenes[id].loop,
+    muted: scenes[id].muted
   });
+
+  if(scenes[id].cornermap === true){
+    $('#corner-map-img').show();
+  }
+  else {
+    $('#corner-map-img').hide();
+  }
 
   // Add all the hotspots for the scene
   var newScene = scenes[id];
@@ -176,6 +297,8 @@ function loadScene(id) {
       distance: hotspot.distance
     });
   }
+
+  scenes[id].next();
 }
 
 function onVRViewError(e) {

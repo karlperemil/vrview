@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>VR View - hotspot example</title>
+    <title>Greepeace - Fukushima</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8" />
     <link href="../style.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
   </head>
   <body>
-    <h1>American Museum of Natural History</h1>
-    <h2>One of the largest museums in the world</h2>
-    <p>The museum has many mammal halls, including the Akeley Hall of African Mammals and the Whitney Memorial Hall of Oceanic Birds.</p>
-
-    <p>The 360 video below shows the Milstein Hall of Ocean Life.</p>
-
+    <div id="corner-map">
+      <img id="corner-map-img" src="../../images/areakarta2.jpg">
+    </div>
+    <div id="intro">
+      <h1>GP - Fukushima</h1>
+      <p>Floating info text on the street about the accident, the problem today and how the
+          360 menu works, the text can be clicked away. (Geir in cooperation with
+          Greenpeace writes and delivers the text)</p>
+      <p>A map over the Fukoshima Prefecture as a floating smaller
+          screen in the corner of all other films and the main menu. With a dot
+          where you are right now. Dot is not constantly moving, but are different
+          for different parts of each film, referring to the scene’s location. (Geir in
+          cooperation with Greenpeace delivers the map including positions)</p>
+      <center><div id="intro-hide" class="button">Look Around</div></center>
+    </div>
     <div id="vrview"></div>
-
-    <p>The hall is most famous for its 94-foot (29 m)-long blue whale model, suspended from the ceiling behind its dorsal fin. The hall's classic lines and visually arresting elegance host cutting-edge exhibition technology and the latest scientific research on the ocean.</p>
-
-    <p>The 29,000-square-foot Hall has been transformed into a fully immersive marine environment with high-definition video projections, interactive computer stations, hands-on models, 14 renovated classic dioramas, and eight new ocean ecosystem displays that transport visitors from the rainbow-hued profusion of life in the Indo-Pacific coral reefs to the flickering bioluminescence of fishes in the eerie darkness of the deep sea.</p>
-
-    <p>Source <a href="https://en.wikipedia.org/wiki/American_Museum_of_Natural_History">Wikipedia</a></p>
-
     <script src="../../build/vrview.js"></script>
     <script src="index.js"></script>
   </body>
